@@ -1,0 +1,14 @@
+AULA 22- MÓDULOS E PACOTES
+MODULARIZAÇÃO
+  O foco maior da modularização é dividir um programa grande, dividir em pequenos módulos.
+  Aumentar a legibilidade, maior facilidade a enontrar erros e a fazer manutenção.
+  Para usar módulos usamos a  ferramenta import e escrevemos o nome do arquivo que queremos importar.
+
+Vantagens de uma Modularização:
+- Organização de código
+- Facilidade de manutenção
+- Ocultação de código detalhado
+- Reutilização em outros projetos
+
+PACOTES
+   Os pacotes servem para organizar vários modulos quando existem vários módulos cria-se um pacote.

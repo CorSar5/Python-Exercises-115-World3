@@ -1,0 +1,12 @@
+AULA 23
+No python existem vários tipos de erros e exceções
+5 exemplos de exceções:
+NameError -- quando se dá print a uma variável não existente
+ValueError -- quando se pede um ''int' e escrevemos como 'str'
+ZeroDivisionError -- quando há uma divisão por 0
+TypeError -- quando se divide 2 por '2' dá erro pois o '2' é como uma string
+IndexError -- quando nas listas se pede print ao número pelo que aparece 		           e não pela contagem(0,1,2....)
+KeyError -- O Indexerror mas em dicionários
+ModuleNotFoundError -- importação de uma biblioteca não existente, 	   	                                   módulo não existente
+
+	Existem diferenças entre Exceções e Erros, normalmente os Erros são de Sintaxe, de digitação, enquanto as Exceções pertencem à 'Exception' erros não de sintaxe mas exemplos como os no topo.
