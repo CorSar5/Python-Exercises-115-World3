@@ -16,8 +16,9 @@ while True:
         #opção de registrar uma pessoa
         cabecalho('NOVO CADASTRO')
         nome = leiaString('Nome: ')
+        nome2 = leiaString('Sobrenome: ')
         idade = leiaInt('Idade: ')
-        cadastrar(arq, nome, idade)
+        cadastrar(arq, nome, nome2, idade)
     elif resposta == 3:
         print('')
     elif resposta == 4:
