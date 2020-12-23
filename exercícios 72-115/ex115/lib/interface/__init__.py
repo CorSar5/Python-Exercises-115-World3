@@ -1,6 +1,6 @@
 def leiaString(mens):
     while True:
-        k = ('caralho','pila','penis','pica','piça','foda-se','fodase','pénis','fodasse','puta','cona','cabrao','vaca', 'aceite', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+        k = ('caralho','pila','penis','pica','piça','foda-se','fodase','pénis','fodasse','puta','cona','cabrao','vaca', 'aceite', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
         try:
             m = str(input(mens)).lower()
         except (KeyboardInterrupt):
@@ -9,6 +9,7 @@ def leiaString(mens):
         except (TypeError, ValueError):
             print('\n\033[31mUsuário deve digitar o seu nome corretamente. \033[m')
             continue
+        m = m.replace(' ', '')
         if m.isnumeric():
             print('\033[31mERRO: por favor, digite um nome válido\033[m')
             continue
@@ -21,6 +22,7 @@ def leiaString(mens):
                 break
             continue
         else:
+            m = m.capitalize()
             return m
 
 
