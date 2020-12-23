@@ -1,5 +1,4 @@
-from ex115.lib.interface import *
-
+from exercícios 72-115.ex115.lib.interface import *
 
 def arqExiste(nome):
     try:

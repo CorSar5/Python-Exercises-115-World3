@@ -1,6 +1,23 @@
-def leiaString(mens):
+def calao(p):
     while True:
         k = ['caralho','pila','penis','pica','piça','foda-se','fodase','pénis','fodasse','puta','cona','cabrao','vaca', 'aceite']
+        p = str(input(p)).lower()
+        if p in k:
+            print('\033[31mERRO: por favor, digite um nome válido\033[m')
+            continue
+        for n in k:
+            if n in p:
+                print('\033[31mERRO: por favor, digite um nome válido\033[m')
+                continue
+            if n == 'aceite':
+                break
+        else:
+            p = p.capitalize()
+            return p
+
+
+def leiaString(mens):
+    while True:
         l = ('1','2','3','4','5','6','7','8','9','0')
         try:
             m = str(input(mens)).lower()
@@ -10,6 +27,7 @@ def leiaString(mens):
         if m.isnumeric():
             print('\033[31mERRO: por favor, digite um nome válido\033[m')
             continue
+        calao(m)
         #não atribuir números a nomes
         '''for c in l:
             if c in m:
@@ -20,7 +38,7 @@ def leiaString(mens):
             continue'''
         #impedir palavras calão escritas com mais 1 letra
 
-        if m in k:
+        '''if m in k:
             print('\033[31mERRO: por favor, digite um nome válido\033[m')
             continue
         for n in k:
@@ -30,7 +48,7 @@ def leiaString(mens):
             if n == 'aceite':
                 break
         else:
-            return m
+            return m'''
 
 
 def leiaInt(msg):
