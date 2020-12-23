@@ -1,54 +1,61 @@
-def calao(p):
+def calao(mens):
     while True:
-        k = ['caralho','pila','penis','pica','piça','foda-se','fodase','pénis','fodasse','puta','cona','cabrao','vaca', 'aceite']
-        p = str(input(p)).lower()
+        k = ['caralho','pila','penis','pica','piça','foda-se','fodase','pénis','fodasse','puta','cona','cabrao','vaca', 'foda']
+        try:
+            p = mens
+        except (KeyboardInterrupt):
+            print('\033[31mO Usuário não digitou o seu nome\033[m')
+            continue
         if p in k:
             print('\033[31mERRO: por favor, digite um nome válido\033[m')
             continue
         for n in k:
             if n in p:
                 print('\033[31mERRO: por favor, digite um nome válido\033[m')
-                continue
-            if n == 'aceite':
                 break
+            continue
         else:
             p = p.capitalize()
             return p
+        p = str(input(mens)).lower()
 
 
-def leiaString(mens):
+def numero(mens):
     while True:
-        l = ('1','2','3','4','5','6','7','8','9','0')
+        l = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
         try:
-            m = str(input(mens)).lower()
+            c = str(input(mens))
+            c=c.replace(' ','')
+            c=c.replace(',','')
         except (KeyboardInterrupt):
-            print('\n\033[31mUsuário preferiu não digitar o seu nome. \033[m')
-            return 0
-        if m.isnumeric():
+            print('\033[31mO Usuário não digitou o seu nome\033[m')
+            continue
+        if c in l:
             print('\033[31mERRO: por favor, digite um nome válido\033[m')
             continue
-        calao(m)
-        #não atribuir números a nomes
-        '''for c in l:
-            if c in m:
+        for n in l:
+            if n in c:
                 print('\033[31mERRO: por favor, digite um nome válido\033[m')
-
-        if m in k:
-            print('\033[31mERRO: por favor, digite um nome válido\033[m')
-            continue'''
-        #impedir palavras calão escritas com mais 1 letra
-
-        '''if m in k:
-            print('\033[31mERRO: por favor, digite um nome válido\033[m')
-            continue
-        for n in k:
-            if n in m:
-                print('\033[31mERRO: por favor, digite um nome válido\033[m')
-                continue
-            if n == 'aceite':
                 break
+            continue
         else:
-            return m'''
+            c = c.capitalize()
+            return c
+
+
+def leiaString(m):
+    while True:
+        mens = str(input(m)).lower()
+        m = m.replace(' ', '')
+        m = m.replace(',', '')
+        m = m.replace('-', '')
+        m = m.replace('_', '')
+        m = m.replace('.', '')
+        m = m.replace(';', '')
+        m = m.replace(':', '')
+        m = m.replace('/', '')
+        calao(mens)
+        return mens
 
 
 def leiaInt(msg):

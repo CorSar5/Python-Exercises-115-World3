@@ -1,5 +1,5 @@
-from lib.arquivo import *
 from time import sleep
+from ex115.lib.arquivo import *
 
 arq = 'cursoemvideo.txt'
 if not arqExiste(arq):
