@@ -16,7 +16,7 @@ def criarArquivo(nome):
         a = open(nome, 'wt+')  #cria write text +
         a.close()
     except:
-        print('\033[31m.Houve um ERRO na criação do arquivo!\033[m')
+        print('\033[31m.There was an ERROR in creating the file!\033[m')
     else:
         print(f'File {nome} successfully created')
 
@@ -74,3 +74,20 @@ def eliminar(op, arq):
                 elif option > 115:
                     print('\033[31mERROR: please enter an existing process\033[m')
                     continue
+
+            except (ValueError, TypeError):
+                print('\033[31mERROR: please enter a valid integer\033[m')
+                continue
+            else:
+                with open("cursoemvideo.txt", "r") as f:
+                    data = f.readlines()
+                if option > len(data):
+                    print('\033[31mERROR: please enter an existing process\033[m')
+                else:
+                    print(f'Case number {option} is being deleted ...')
+                    option -= 1
+                    del data[option]
+                with open("cursoemvideo.txt", "w") as f:
+                    for c in data:
+                        f.write(c)
+                break
